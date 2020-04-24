@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading" color="primary">
+        <h4 class="panel-title">Membership application</h4>
+      </div>
+      <div class="panel-body">
+
+        <form #memberForm="ngForm" (ngSubmit)="save(memberForm.value)">     
+            
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Placeholder" [(ngModel)]="member.Name" name="name">               
+            </mat-form-field>
+<br>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="member.Email" name="email">
+                 
+              </mat-form-field>
+<br>
+              <mat-form-field appearance="fill">
+                <mat-label>Mobile</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="member.Mobile" name="mobile">
+                 
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Member Number</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="member.MemberNumber" name="memberNumber">
+                 
+              </mat-form-field>
+
+    <br>     
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" type="submit" class="button" >Submit Form</button>
+    </div>  
+    
+    </form>
+        
+        
+      </div>
+    </div>
+  </div>
