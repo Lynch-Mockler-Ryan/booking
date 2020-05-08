@@ -1,0 +1,23 @@
+@import "~@angular/material/theming";
+@include mat-core();
+@import "_dafm-palettes";
+
+$rdfs-primary: mat-palette($dafm-blue, 400, 300, 600);
+$rdfs-accent: mat-palette($dafm-gold, 400, 300, 500);
+$rdfs-warn: mat-palette($dafm-red, 500, 300, 800);
+$rdfs-theme: mat-light-theme($rdfs-primary, $rdfs-accent, $rdfs-warn);
+
+$mat-light-theme-background:mat-palette($dafm-red, 400, 300, 600);
+
+@mixin apply-theme($theme) {
+  $warn: map-get($theme, "warn");
+
+  @include angular-material-theme($theme);
+
+  .tooltip-warn {
+    background-color: mat-color($warn);
+  }
+}
+
+@include angular-material-theme($rdfs-theme);
+

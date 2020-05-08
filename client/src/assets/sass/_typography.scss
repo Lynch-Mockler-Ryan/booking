@@ -1,0 +1,17 @@
+@import "~@angular/material/theming";
+
+$rdfs-typography: mat-typography-config(
+    $font-family: 'Arial, Roboto, "Helvetica Neue", sans-serif',
+    $title: mat-typography-level(26px, 1em, 1.5, 500),
+    $subheading-2: mat-typography-level(18px,1em, 1.5, 500),
+    $subheading-1: mat-typography-level(26px,0.9em, 1.5, 500),
+    $body-1: mat-typography-level(16px, 1.25, 300),
+    $body-2: mat-typography-level(13px, 1em, 1.25, 500),
+    $input: mat-typography-level(1em, 1.25, 300),
+    $button: mat-typography-level(1em, 1.25, 400)
+
+);
+
+@mixin apply-typography($config) {
+
+}

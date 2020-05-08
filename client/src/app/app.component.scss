@@ -1,0 +1,330 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@mixin app-component-theme($theme) {
+  $primary: map-get($theme, primary);
+}
+
+
+
+.backgroundHeader {
+  background-image: none;
+  background-position: left;
+  background-repeat: no-repeat;
+  min-height: 5em;
+  min-width: 2em;
+  background-size: contain;
+  size: 25em;
+}
+
+.heading{
+  color: #006778;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px #aaaaaa;
+  font-size: 10em;
+  white-space: nowrap;
+}
+
+.sub_heading{
+  background-image: none;
+  background-position: right;
+  background-repeat: no-repeat;
+  min-height: 5.5em;
+  min-width: 2em;
+  background-size: contain;
+}
+
+
+.section-container{
+  border: #5cadea 1px solid;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+
+.paragraph-heading{
+  color: #1eabd1;
+  border-bottom: #5cadea 1px solid;
+  background-color: #b3d4ff5e;
+  font-weight:  bold;
+}
+Input{
+  width: 100%;
+}
+
+.btn-default.override {
+  background-color: #24a57b;
+  border-color: #24a57b;
+  color:white;
+}
+
+.btn-default.override.active,
+.btn-default.override.focus,
+.btn-default.override:active,
+.btn-default.override:focus,
+.btn-default.override:hover,
+.open > .dropdown-toggle.btn-default.override {
+  background-color: #006778;
+  border-color: #006778;
+  color:white;
+}
+
+mat-expansion-panel{
+  margin-bottom:  2em;
+}
+
+.paragraph-content{
+  padding: 1em;
+}
+label{
+  font-weight: 700;
+}
+
+
+.matHeader {
+  background-image: none;
+  background-color: #2e6e9e;
+  color: white;
+  border-spacing: 10px 50px;
+  vertical-align: center;
+  border: none;
+}
+
+//mat-row:nth-child(even) {
+//  color: #666666;
+//  background-color: #EFF3F8;
+//
+//}
+//
+//mat-row:nth-child(odd) {
+//  color: #666666;
+//  background-color: white;
+//}
+mat-header-row {
+  min-height: 3em;
+  align-items: center;
+}
+mat-row{
+  min-height: 4em;
+
+}
+input.input-sm.ng-invalid.ng-touched,
+mat-select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+input.input-sm.ng-invalid.ng-dirty,
+mat-select.ng-invalid.ng-dirty,
+textarea.ng-invalid.ng-dirty {
+  border: 1px solid red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background: #66afe9;
+  box-shadow: inset 0 1px 1px #66afe9, 0 0 8px #66afe9;
+}
+
+.mat-focused .mat-form-field-placeholder {
+  color: #66afe9;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+
+
+.pdt{
+  padding-top: 1.5em;
+}
+
+.active{
+  color: #ffffff !important;
+}
+
+
+
+
+.mat-button-toggle-label-content{
+  background-color: #24a57b;
+  border-color: #24a57b;
+  color:white;
+}
+
+
+.mat-button-toggle-focus-overlay{
+  background-color: #24a57b;
+  border-color: #24a57b;
+  color:white;
+}
+
+.mat-header-row{
+  background-color: #ffffff;
+  border-bottom: 2px solid #b4a76c;
+}
+.mat-header-row > mat-header-cell {
+  color: black;
+}
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@mixin app-component-theme($theme) {
+  $primary: map-get($theme, primary);
+}
+
+
+
+.backgroundHeader {
+  background-image: none;
+  background-position: left;
+  background-repeat: no-repeat;
+  min-height: 5em;
+  min-width: 2em;
+  background-size: contain;
+  size: 25em;
+}
+
+.heading{
+  color: #006778;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px #aaaaaa;
+  font-size: 10em;
+  white-space: nowrap;
+}
+
+.sub_heading{
+  background-image: none;
+  background-position: right;
+  background-repeat: no-repeat;
+  min-height: 5.5em;
+  min-width: 2em;
+  background-size: contain;
+}
+
+
+.section-container{
+  border: #5cadea 1px solid;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+
+.paragraph-heading{
+  color: #1eabd1;
+  border-bottom: #5cadea 1px solid;
+  background-color: #b3d4ff5e;
+  font-weight:  bold;
+}
+Input{
+  width: 100%;
+}
+
+.btn-default.override {
+  background-color: #24a57b;
+  border-color: #24a57b;
+  color:white;
+}
+
+.btn-default.override.active,
+.btn-default.override.focus,
+.btn-default.override:active,
+.btn-default.override:focus,
+.btn-default.override:hover,
+.open > .dropdown-toggle.btn-default.override {
+  background-color: #006778;
+  border-color: #006778;
+  color:white;
+}
+
+mat-expansion-panel{
+  margin-bottom:  2em;
+}
+
+.paragraph-content{
+  padding: 1em;
+}
+label{
+  font-weight: 700;
+}
+
+
+.matHeader {
+  background-image: none;
+  background-color: #2e6e9e;
+  color: white;
+  border-spacing: 10px 50px;
+  vertical-align: center;
+  border: none;
+}
+
+//mat-row:nth-child(even) {
+//  color: #666666;
+//  background-color: #EFF3F8;
+//
+//}
+//
+//mat-row:nth-child(odd) {
+//  color: #666666;
+//  background-color: white;
+//}
+mat-header-row {
+  min-height: 3em;
+  align-items: center;
+}
+mat-row{
+  min-height: 4em;
+
+}
+input.input-sm.ng-invalid.ng-touched,
+mat-select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+input.input-sm.ng-invalid.ng-dirty,
+mat-select.ng-invalid.ng-dirty,
+textarea.ng-invalid.ng-dirty {
+  border: 1px solid red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background: #66afe9;
+  box-shadow: inset 0 1px 1px #66afe9, 0 0 8px #66afe9;
+}
+
+.mat-focused .mat-form-field-placeholder {
+  color: #66afe9;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+
+
+.pdt{
+  padding-top: 1.5em;
+}
+
+.active{
+  color: #ffffff !important;
+}
+
+
+
+
+.mat-button-toggle-label-content{
+  background-color: #24a57b;
+  border-color: #24a57b;
+  color:white;
+}
+
+
+.mat-button-toggle-focus-overlay{
+  background-color: #24a57b;
+  border-color: #24a57b;
+  color:white;
+}
+
+.mat-header-row{
+  background-color: #ffffff;
+  border-bottom: 2px solid #b4a76c;
+}
+.mat-header-row > mat-header-cell {
+  color: black;
+}

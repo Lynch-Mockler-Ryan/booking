@@ -29,8 +29,13 @@
             ],
             "styles": [
               "src/custom-theme.scss",
-              "src/styles.sass"
+              "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "../node_modules/bootstrap/scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -93,7 +98,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -126,5 +131,10 @@
       }
     }
   },
-  "defaultProject": "client"
+  "defaultProject": "client",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -1,0 +1,250 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import "./assets/sass/global-variables";
+@import "./assets/sass/_dafm-palettes";
+@import "./assets/sass/_theming";
+
+@import "./assets/sass/_typography";
+
+@include mat-core($rdfs-typography);
+
+$primary-light: mat-palette($dafm-blue, 500);
+$accent-light: mat-palette($dafm-gold, 500);
+$warn-light: mat-palette($dafm-red, 500);
+
+$primary-dark: mat-palette($mat-lime, 600);
+$accent-dark: mat-palette($mat-orange, 600);
+$warn-dark: mat-palette($dafm-red, 500);
+
+$theme-light: mat-light-theme($primary-light, $accent-light, $warn-light);
+$theme-dark: mat-dark-theme($primary-dark, $accent-dark, $warn-dark);
+
+@include apply-theme($theme-light);
+
+@include apply-typography($rdfs-typography);
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinMe {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  min-width: 320px;
+  min-height: 100%;
+  height: 100%;
+}
+
+p {
+  text-align: justify;
+}
+
+span {
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.large-icon {
+  width: 100%;
+  height: 100%;
+  font-size: 48px;
+}
+
+.medium-icon {
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+}
+
+button.withIconOnRightSide {
+  padding-right: 6px;
+}
+
+.flex1 {
+  flex-grow: 1 !important;
+  flex-shrink: 1 !important;
+  flex-basis: auto !important;
+}
+
+.medium-margin {
+  margin: $medium-margin-width;
+}
+
+
+
+button:focus,
+span:focus {
+  outline: 0;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+dl {
+  dt,
+  dd {
+    padding: 0.25em;
+  }
+}
+
+.mat-dialog-actions {
+  margin-bottom: -1em !important;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+.form-control-override{
+  display: block;
+  width: 100%;
+  //height: calc(1.5em + .75rem + 2px);
+  padding: .300rem 0.75rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#content {
+  padding-bottom: 20px;
+}
+
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: mat-color($dafm-blue, 200, 1);
+  text-align: center;
+  color: #004152;
+  font-size: 12px;
+  border-top: 2px solid mat-color($dafm-gold, 900);;
+}
+
+th {
+  color: white;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: mat-color($dafm-blue, 200, 1);
+  margin: 5px;
+}
+
+.mat-expansion-panel-header-title{
+  color: white;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+
+}
+
+mat-expansion-panel-header{
+  background-color: mat-color($dafm-blue,200) !important;
+}
+
+.dafm-table{
+  width:100%; 
+}
+
+.mat-header-cell{
+  background-color: mat-color($dafm-blue,400) !important;
+  font-size:mat-font-size($rdfs-typography, body-1);
+  color:white;
+  padding: 0.05rem 1rem;
+  border: 1px white solid;
+}
+
+.mat-cell{
+  border-bottom: 1px solid mat-color($dafm-grey,200) !important;  
+  padding: 0.05rem 1rem;
+}
+
+.nav-bar{
+  background-color:  mat-color($dafm-blue,400) ;
+  margin-bottom: 1em;
+  padding: 0.05rem 1rem;
+  border: 1px #004b57 solid;
+}
+
+.nav-link{
+  font-size: mat-font-size($rdfs-typography, body-1);
+  color: white !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.nav-bar-nav{}
+
+.nav-link > active{
+  background-color: white !important;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+::ng-deep .mat-sort-header-container:not(.mat-sort-header-sorted) .mat-sort-header-arrow {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  color: white;
+}
+
+
+.panel-default > .panel-heading {
+  font-size: mat-font-size($rdfs-typography, subheading-2);
+  background-color: #177485;
+  border-color: #ddd;
+  color:white;
+}
