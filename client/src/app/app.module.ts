@@ -22,6 +22,14 @@ import { FooterComponent } from './component/footer/footer.component';
 import { TitleComponent } from './component/title/title.component';
 
 import {MatCardModule} from '@angular/material/card';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { BookingformComponent } from './component/bookingform/bookingform.component'; 
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { MatDialog} from '@angular/material/dialog';
+import { MatDialogConfig } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +40,7 @@ import {MatCardModule} from '@angular/material/card';
     BookingcalendarComponent,
     FooterComponent,
     TitleComponent,
+    BookingformComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +52,14 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     MatCardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FullCalendarModule,
+    MatDialogModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    MatDialog
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [BookingformComponent]
 })
 export class AppModule { }

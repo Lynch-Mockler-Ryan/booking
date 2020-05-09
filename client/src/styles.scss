@@ -9,6 +9,20 @@
 
 @include mat-core($rdfs-typography);
 
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/timegrid/main.css';
+
+
+body {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+
+
+
+
 $primary-light: mat-palette($dafm-blue, 500);
 $accent-light: mat-palette($dafm-gold, 500);
 $warn-light: mat-palette($dafm-red, 500);

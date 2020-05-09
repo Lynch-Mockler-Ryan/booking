@@ -1,0 +1,49 @@
+<div class="container-fluid">
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading" color="primary">
+        <h4 class="panel-title">Court Booking</h4>
+      </div>
+      <div class="panel-body">
+
+        <form #bookingForm="ngForm" (ngSubmit)="save(booking.value)">     
+            
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Placeholder" [(ngModel)]="booking.Name" name="name">               
+            </mat-form-field>
+<br>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="booking.Email" name="email">
+                 
+              </mat-form-field>
+<br>
+              <mat-form-field appearance="fill">
+                <mat-label>Mobile</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="booking.Mobile" name="mobile">
+                 
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Member Number</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="booking.startTime" name="memberNumber">
+                 
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Member Number</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="booking.finishTime" name="memberNumber">
+                 
+              </mat-form-field>
+
+    <br>     
+
+    
+    </form>
+        
+        
+      </div>
+    </div>
+  </div>
