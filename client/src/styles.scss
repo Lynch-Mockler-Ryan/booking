@@ -262,3 +262,11 @@ mat-expansion-panel-header{
   border-color: #ddd;
   color:white;
 }
+
+.timepicker-overlay {
+  z-index: 10000000 !important;
+}
+
+.timepicker-backdrop-overlay {
+  z-index: 10000000 !important;
+}

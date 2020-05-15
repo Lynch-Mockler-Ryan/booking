@@ -30,6 +30,8 @@ import { MatDialog} from '@angular/material/dialog';
 import { MatDialogConfig } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { MatDialogRef } from '@angular/material/dialog';
     FormsModule,
     HttpClientModule,
     FullCalendarModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [
     MatDialog

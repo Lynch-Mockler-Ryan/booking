@@ -1,49 +1,60 @@
 <div class="container-fluid">
 
 
-    <div class="panel panel-primary">
-      <div class="panel-heading" color="primary">
-        <h4 class="panel-title">Court Booking</h4>
-      </div>
-      <div class="panel-body">
+  <div class="panel panel-primary">
+    <div class="panel-heading" color="primary">
+      <h4 class="panel-title">Court Booking</h4>
+    </div>
+    <div class="panel-body">
 
-        <form #bookingForm="ngForm" (ngSubmit)="save(booking.value)">     
-            
-            <mat-form-field appearance="fill">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Placeholder" [(ngModel)]="booking.Name" name="name">               
-            </mat-form-field>
-<br>
-            <mat-form-field appearance="fill">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Placeholder" [(ngModel)]="booking.Email" name="email">
-                 
-              </mat-form-field>
-<br>
-              <mat-form-field appearance="fill">
-                <mat-label>Mobile</mat-label>
-                <input matInput placeholder="Placeholder" [(ngModel)]="booking.Mobile" name="mobile">
-                 
-              </mat-form-field>
+      <form #bookingForm="ngForm" (ngSubmit)="add(bookingForm.value)">
 
-              <mat-form-field appearance="fill">
-                <mat-label>Member Number</mat-label>
-                <input matInput placeholder="Placeholder" [(ngModel)]="booking.startTime" name="memberNumber">
-                 
-              </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="booking.Name" name="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="booking.Email" name="email">
 
-              <mat-form-field appearance="fill">
-                <mat-label>Member Number</mat-label>
-                <input matInput placeholder="Placeholder" [(ngModel)]="booking.finishTime" name="memberNumber">
-                 
-              </mat-form-field>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="booking.Mobile" name="mobile">
 
-    <br>     
+        </mat-form-field>
 
-    
-    </form>
-        
-        
-      </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Start Time</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="booking.start" name="start" [ngxTimepicker]="startpicker" [format]="24" readonly>
+          <ngx-material-timepicker-toggle [for]="startpicker"></ngx-material-timepicker-toggle>
+          <ngx-material-timepicker #startpicker></ngx-material-timepicker>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Finish Time</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="booking.finish" name="finish" [ngxTimepicker]="finishpicker" [format]="24" readonly>
+          <ngx-material-timepicker-toggle [for]="finishpicker"></ngx-material-timepicker-toggle>
+          <ngx-material-timepicker #finishpicker></ngx-material-timepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Court</mat-label>
+          <input matInput placeholder="Placeholder" [(ngModel)]="booking.court" name="court">
+
+        </mat-form-field>
+
+        <br>
+        <div class="form-element">
+          <button mat-raised-button color="primary" type="submit" class="button">Add</button>
+        </div>
+
+      </form>
+
+
     </div>
   </div>
+</div>

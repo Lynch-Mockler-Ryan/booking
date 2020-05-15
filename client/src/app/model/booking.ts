@@ -6,7 +6,8 @@ export class Booking{
     email : string;
     mobile : number;    
     date : Date;
-    startTime : Time;
-    finishTime : Time;
+    start : Date;
+    finish : Date;
+    court : number;
 
 }
